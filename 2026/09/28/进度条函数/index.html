@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>进度条函数 | Hexo</title><meta name="author" content="殷可欣"><meta name="copyright" content="殷可欣"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="📌 项目简介这是一个基于 Python 实现的进度条函数，模拟真实环境下的进度条走向，配备百分数显示。 🛠️ 技术内容1.运用 time 概念实现休眠2.运用 def 定义函数并调用函数3.运用”””实现长段注释，并定义参数和返回值，以便后期查阅4.运用 range 循环5.运用了 f 定义变量 💻 运行截图https:&#x2F;&#x2F;pic1.imgdb.cn&#x2F;i&#x2F;034Wh2NtNalNtooDXj">
+<meta property="og:type" content="article">
+<meta property="og:title" content="进度条函数">
+<meta property="og:url" content="http://example.com/2026/09/28/%E8%BF%9B%E5%BA%A6%E6%9D%A1%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="📌 项目简介这是一个基于 Python 实现的进度条函数，模拟真实环境下的进度条走向，配备百分数显示。 🛠️ 技术内容1.运用 time 概念实现休眠2.运用 def 定义函数并调用函数3.运用”””实现长段注释，并定义参数和返回值，以便后期查阅4.运用 range 循环5.运用了 f 定义变量 💻 运行截图https:&#x2F;&#x2F;pic1.imgdb.cn&#x2F;i&#x2F;034Wh2NtNalNtooDXj">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.imgdb.cn/i/034WgsjH657Eq50s8lI8ed.jpg">
+<meta property="article:published_time" content="2026-09-28T14:01:30.000Z">
+<meta property="article:modified_time" content="2026-09-28T14:35:07.804Z">
+<meta property="article:author" content="殷可欣">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="项目">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.imgdb.cn/i/034WgsjH657Eq50s8lI8ed.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "进度条函数",
+  "url": "http://example.com/2026/09/28/%E8%BF%9B%E5%BA%A6%E6%9D%A1%E5%87%BD%E6%95%B0/",
+  "image": "https://pic1.imgdb.cn/i/034WgsjH657Eq50s8lI8ed.jpg",
+  "datePublished": "2026-09-28T14:01:30.000Z",
+  "dateModified": "2026-09-28T14:35:07.804Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "殷可欣",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2026/09/28/%E8%BF%9B%E5%BA%A6%E6%9D%A1%E5%87%BD%E6%95%B0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '进度条函数',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://github.com/NancyYin-789.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%97%A5%E8%AE%B0/"><i class="fa-fw fas fa-pen"></i><span> 日记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E4%BB%A3%E7%A0%81/"><i class="fa-fw fas fa-code"></i><span> 代码</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%88%9B%E4%BD%9C/"><i class="fa-fw fas fa-feather"></i><span> 创作</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%94%B6%E8%97%8F/"><i class="fa-fw fas fa-star"></i><span> 收藏</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://pic1.imgdb.cn/i/034WgsjH657Eq50s8lI8ed.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Hexo</span></a><a class="nav-page-title" href="/"><span class="site-name">进度条函数</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%97%A5%E8%AE%B0/"><i class="fa-fw fas fa-pen"></i><span> 日记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E4%BB%A3%E7%A0%81/"><i class="fa-fw fas fa-code"></i><span> 代码</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%88%9B%E4%BD%9C/"><i class="fa-fw fas fa-feather"></i><span> 创作</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%94%B6%E8%97%8F/"><i class="fa-fw fas fa-star"></i><span> 收藏</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">进度条函数</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-09-28T14:01:30.000Z" title="发表于 2026-09-28 22:01:30">2026-09-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-09-28T14:35:07.804Z" title="更新于 2026-09-28 22:35:07">2026-09-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%BB%A3%E7%A0%81/">代码</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>📌 项目简介<br>这是一个基于 Python 实现的进度条函数，模拟真实环境下的进度条走向，配备百分数显示。</p>
+<p>🛠️ 技术内容<br>1.运用 time 概念实现休眠<br>2.运用 def 定义函数并调用函数<br>3.运用”””实现长段注释，并定义参数和返回值，以便后期查阅<br>4.运用 range 循环<br>5.运用了 f 定义变量</p>
+<p>💻 运行截图<br><a target="_blank" rel="noopener" href="https://pic1.imgdb.cn/i/034Wh2NtNalNtooDXjnq2P.png">https://pic1.imgdb.cn/i/034Wh2NtNalNtooDXjnq2P.png</a></p>
+<p>🔗 项目源码<br>👉 <a target="_blank" rel="noopener" href="https://github.com/NancyYin-789/coding/blob/main/2.1.py">点击访问我的 GitHub 仓库</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">殷可欣</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2026/09/28/%E8%BF%9B%E5%BA%A6%E6%9D%A1%E5%87%BD%E6%95%B0/">http://example.com/2026/09/28/%E8%BF%9B%E5%BA%A6%E6%9D%A1%E5%87%BD%E6%95%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Hexo</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/python/">python</a><a class="post-meta__tags" href="/tags/%E9%A1%B9%E7%9B%AE/">项目</a></div><div class="post-share"><div class="social-share" data-image="https://pic1.imgdb.cn/i/034WgsjH657Eq50s8lI8ed.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/09/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%BA%8C%E5%88%86%E6%B3%95%E7%8C%9C%E6%95%B0%E5%AD%97/" title="机器学习--二分法猜数字"><img class="cover" src="https://pic1.imgdb.cn/i/034WhEDfXkNRBwnjNmMRBJ.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">机器学习--二分法猜数字</div></div><div class="info-2"><div class="info-item-1">📌 项目简介这是一个基于 Python 开发的借助二分查找算法，通过不断缩小猜测区间，快速找到目标数字，以趣味方式理解二分算法原理的小项目。 🛠️ 技术内容1.引入 random ，time 函数2.运用了 random.randint 库，实现随机生成数字3.运用 while 循环4.运用 !&#x3D; , +&#x3D; , &#x2F;&#x2F; 等运算符号5.用 if ，elif 巧妙实现缩小范围6.可以自定义数字的上限 🚀 巧妙之处if guess &lt; answer:        print(“太小了”)        start &#x3D; guess + 1 elif guess &gt; answer:        print(“太大了”)        end &#x3D; guess - 1 这样就实现了自动左右缩小范围，并让机器继续猜数字，就可以相对减少猜的次数啦。 💻 运行截图https://pic1.imgdb.cn/i/034WhSs8ikZDwB9EgaIZig.png 🔗 项目源码👉 点击访问我的 GitHub 仓库 </div></div></div></a><a class="pagination-related" href="/2026/09/28/%E5%80%92%E5%BA%8F9x9%E4%B9%98%E6%B3%95%E8%A1%A8/" title="倒序9x9乘法表"><img class="cover" src="https://pic1.imgdb.cn/i/034WfD7pNyTHRFjoiVbmYJ.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">倒序9x9乘法表</div></div><div class="info-2"><div class="info-item-1">📌 项目简介这是一个基于 Python 的倒序9x9乘法表。 🛠️ 技术内容1.运用 range 循环2.运用了 f 定义变量3.运用 end&#x3D; 设置如换行，空格操作 💻 运行截图https://pic1.imgdb.cn/i/034WfNLTEUABk2zFSQQNq4.png 🔗 项目源码👉 点击访问我的 GitHub 仓库 </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2026/09/28/%E5%80%92%E5%BA%8F9x9%E4%B9%98%E6%B3%95%E8%A1%A8/" title="倒序9x9乘法表"><img class="cover" src="https://pic1.imgdb.cn/i/034WfD7pNyTHRFjoiVbmYJ.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-09-28</div><div class="info-item-2">倒序9x9乘法表</div></div><div class="info-2"><div class="info-item-1">📌 项目简介这是一个基于 Python 的倒序9x9乘法表。 🛠️ 技术内容1.运用 range 循环2.运用了 f 定义变量3.运用 end&#x3D; 设置如换行，空格操作 💻 运行截图https://pic1.imgdb.cn/i/034WfNLTEUABk2zFSQQNq4.png 🔗 项目源码👉 点击访问我的 GitHub 仓库 </div></div></div></a><a class="pagination-related" href="/2026/09/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AApython%E9%A1%B9%E7%9B%AE%EF%BC%9A%E4%BC%9A%E5%91%98%E5%85%85%E5%80%BC%E7%B3%BB%E7%BB%9F/" title="我的第一个python项目：会员充值系统"><img class="cover" src="https://s41.ax1x.com/2026/09/28/pn88GxU.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-09-28</div><div class="info-item-2">我的第一个python项目：会员充值系统</div></div><div class="info-2"><div class="info-item-1">📌 项目简介这是一个基于 Python 开发的会员充值管理系统，可以根据用户输入的金额进行自动赠送礼金，也可以判断新老用户并对应赠送相应金额。 🛠️ 技术内容1.运用了 if，elif ，else 相关知识2.运用了运算符号如 &lt;&#x3D; , &gt;&#x3D; 等3.运用了 f 定义变量4.借助 ai 检查并完善代码，并配上注释 💻 运行截图https://s41.ax1x.com/2026/09/28/pn88xJ0.png 🔗 项目源码👉 点击访问我的 GitHub 仓库 </div></div></div></a><a class="pagination-related" href="/2026/09/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%BA%8C%E5%88%86%E6%B3%95%E7%8C%9C%E6%95%B0%E5%AD%97/" title="机器学习--二分法猜数字"><img class="cover" src="https://pic1.imgdb.cn/i/034WhEDfXkNRBwnjNmMRBJ.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2026-09-28</div><div class="info-item-2">机器学习--二分法猜数字</div></div><div class="info-2"><div class="info-item-1">📌 项目简介这是一个基于 Python 开发的借助二分查找算法，通过不断缩小猜测区间，快速找到目标数字，以趣味方式理解二分算法原理的小项目。 🛠️ 技术内容1.引入 random ，time 函数2.运用了 random.randint 库，实现随机生成数字3.运用 while 循环4.运用 !&#x3D; , +&#x3D; , &#x2F;&#x2F; 等运算符号5.用 if ，elif 巧妙实现缩小范围6.可以自定义数字的上限 🚀 巧妙之处if guess &lt; answer:        print(“太小了”)        start &#x3D; guess + 1 elif guess &gt; answer:        print(“太大了”)        end &#x3D; guess - 1 这样就实现了自动左右缩小范围，并让机器继续猜数字，就可以相对减少猜的次数啦。 💻 运行截图https://pic1.imgdb.cn/i/034WhSs8ikZDwB9EgaIZig.png 🔗 项目源码👉 点击访问我的 GitHub 仓库 </div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://github.com/NancyYin-789.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">殷可欣</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/09/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%BA%8C%E5%88%86%E6%B3%95%E7%8C%9C%E6%95%B0%E5%AD%97/" title="机器学习--二分法猜数字"><img src="https://pic1.imgdb.cn/i/034WhEDfXkNRBwnjNmMRBJ.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器学习--二分法猜数字"/></a><div class="content"><a class="title" href="/2026/09/28/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E4%BA%8C%E5%88%86%E6%B3%95%E7%8C%9C%E6%95%B0%E5%AD%97/" title="机器学习--二分法猜数字">机器学习--二分法猜数字</a><time datetime="2026-09-28T14:15:13.000Z" title="发表于 2026-09-28 22:15:13">2026-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/09/28/%E8%BF%9B%E5%BA%A6%E6%9D%A1%E5%87%BD%E6%95%B0/" title="进度条函数"><img src="https://pic1.imgdb.cn/i/034WgsjH657Eq50s8lI8ed.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="进度条函数"/></a><div class="content"><a class="title" href="/2026/09/28/%E8%BF%9B%E5%BA%A6%E6%9D%A1%E5%87%BD%E6%95%B0/" title="进度条函数">进度条函数</a><time datetime="2026-09-28T14:01:30.000Z" title="发表于 2026-09-28 22:01:30">2026-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/09/28/%E5%80%92%E5%BA%8F9x9%E4%B9%98%E6%B3%95%E8%A1%A8/" title="倒序9x9乘法表"><img src="https://pic1.imgdb.cn/i/034WfD7pNyTHRFjoiVbmYJ.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="倒序9x9乘法表"/></a><div class="content"><a class="title" href="/2026/09/28/%E5%80%92%E5%BA%8F9x9%E4%B9%98%E6%B3%95%E8%A1%A8/" title="倒序9x9乘法表">倒序9x9乘法表</a><time datetime="2026-09-28T12:38:10.000Z" title="发表于 2026-09-28 20:38:10">2026-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/09/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AApython%E9%A1%B9%E7%9B%AE%EF%BC%9A%E4%BC%9A%E5%91%98%E5%85%85%E5%80%BC%E7%B3%BB%E7%BB%9F/" title="我的第一个python项目：会员充值系统"><img src="https://s41.ax1x.com/2026/09/28/pn88GxU.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的第一个python项目：会员充值系统"/></a><div class="content"><a class="title" href="/2026/09/28/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AApython%E9%A1%B9%E7%9B%AE%EF%BC%9A%E4%BC%9A%E5%91%98%E5%85%85%E5%80%BC%E7%B3%BB%E7%BB%9F/" title="我的第一个python项目：会员充值系统">我的第一个python项目：会员充值系统</a><time datetime="2026-09-28T11:45:01.000Z" title="发表于 2026-09-28 19:45:01">2026-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/09/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="我的第一篇博客"><img src="https://pic1.imgdb.cn/i/034WiPubDz4XHalBXO86we.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的第一篇博客"/></a><div class="content"><a class="title" href="/2026/09/26/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="我的第一篇博客">我的第一篇博客</a><time datetime="2026-09-26T05:50:28.000Z" title="发表于 2026-09-26 13:50:28">2026-09-26</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 - 2026 By 殷可欣</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.0-b3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script>document.addEventListener('DOMContentLoaded', function() { var el = document.querySelector('.site-title') || document.querySelector('#site-title') || document.querySelector('.site-subtitle') || document.querySelector('#site-subtitle'); if (el) { var str = '请看我的代码板块，虽简单但凝聚了我的passion！','欢迎来到我的博客！记录热爱与生活~'; var i = 0; (function typeWriter() { if (i < str.length) { el.innerHTML = str.substring(0, i + 1); i++; setTimeout(typeWriter, 150); } })(); } });</script><script> // 当页面加载完成后执行 window.addEventListener('load', function() { // 找到你截图里的那个微信图标（假设它在社交图标区域） var wechatBtn = document.querySelector('.social-icon .fab.fa-weixin'); if (wechatBtn) { // 给图标添加点击事件 wechatBtn.addEventListener('click', function(e) { e.preventDefault(); // 弹出二维码图片（换成你图床的图片链接） var imgUrl = 'https://pic1.imgdb.cn/i/034WhtQrC6fvhgrIZO2Pre.jpg'; var overlay = document.createElement('div'); overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9999;display:flex;justify-content:center;align-items:center;cursor:pointer;'; overlay.innerHTML = '< img src="' + imgUrl + '" style="max-width:80%;max-height:80%;border-radius:10px;box-shadow:0 0 20px rgba(255,255,255,0.5);">'; document.body.appendChild(overlay); // 点击遮罩层关闭弹窗 overlay.addEventListener('click', function() { overlay.remove(); }); }); } }); </script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
