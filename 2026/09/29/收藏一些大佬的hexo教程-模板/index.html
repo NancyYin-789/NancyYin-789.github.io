@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>收藏一些大佬的hexo教程&amp;模板 | NancyYin</title><meta name="author" content="殷可欣"><meta name="copyright" content="殷可欣"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这里收录一些hexo博客搭建的方法和教程，希望我的博客可以逐渐完善！ 🔗 文件链接👉 点击访问教程1（xbxyftx版） 👉 点击访问教程2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="收藏一些大佬的hexo教程&amp;模板">
+<meta property="og:url" content="http://example.com/2026/09/29/%E6%94%B6%E8%97%8F%E4%B8%80%E4%BA%9B%E5%A4%A7%E4%BD%AC%E7%9A%84hexo%E6%95%99%E7%A8%8B-%E6%A8%A1%E6%9D%BF/index.html">
+<meta property="og:site_name" content="NancyYin">
+<meta property="og:description" content="这里收录一些hexo博客搭建的方法和教程，希望我的博客可以逐渐完善！ 🔗 文件链接👉 点击访问教程1（xbxyftx版） 👉 点击访问教程2">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic1.imgdb.cn/i/034XGS6VVAO1jBL9f1kvfK.jpg">
+<meta property="article:published_time" content="2026-09-29T14:11:16.000Z">
+<meta property="article:modified_time" content="2026-09-29T14:20:07.962Z">
+<meta property="article:author" content="殷可欣">
+<meta property="article:tag" content="编程 ，hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic1.imgdb.cn/i/034XGS6VVAO1jBL9f1kvfK.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "收藏一些大佬的hexo教程&模板",
+  "url": "http://example.com/2026/09/29/%E6%94%B6%E8%97%8F%E4%B8%80%E4%BA%9B%E5%A4%A7%E4%BD%AC%E7%9A%84hexo%E6%95%99%E7%A8%8B-%E6%A8%A1%E6%9D%BF/",
+  "image": "https://pic1.imgdb.cn/i/034XGS6VVAO1jBL9f1kvfK.jpg",
+  "datePublished": "2026-09-29T14:11:16.000Z",
+  "dateModified": "2026-09-29T14:20:07.962Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "殷可欣",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2026/09/29/%E6%94%B6%E8%97%8F%E4%B8%80%E4%BA%9B%E5%A4%A7%E4%BD%AC%E7%9A%84hexo%E6%95%99%E7%A8%8B-%E6%A8%A1%E6%9D%BF/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '收藏一些大佬的hexo教程&模板',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div id="web_bg" style="background-image: url(https://pic1.imgdb.cn/i/034WiPubDz4XHalBXO86we.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://github.com/NancyYin-789.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%97%A5%E8%AE%B0/"><i class="fa-fw fas fa-pen"></i><span> 日记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E4%BB%A3%E7%A0%81/"><i class="fa-fw fas fa-code"></i><span> 代码</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%88%9B%E4%BD%9C/"><i class="fa-fw fas fa-feather"></i><span> 创作</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%94%B6%E8%97%8F/"><i class="fa-fw fas fa-star"></i><span> 收藏</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://pic1.imgdb.cn/i/034XGS6VVAO1jBL9f1kvfK.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">NancyYin</span></a><a class="nav-page-title" href="/"><span class="site-name">收藏一些大佬的hexo教程&amp;模板</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%97%A5%E8%AE%B0/"><i class="fa-fw fas fa-pen"></i><span> 日记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E4%BB%A3%E7%A0%81/"><i class="fa-fw fas fa-code"></i><span> 代码</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E5%88%9B%E4%BD%9C/"><i class="fa-fw fas fa-feather"></i><span> 创作</span></a></div><div class="menus_item"><a class="site-page" href="/categories/%E6%94%B6%E8%97%8F/"><i class="fa-fw fas fa-star"></i><span> 收藏</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">收藏一些大佬的hexo教程&amp;模板</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-09-29T14:11:16.000Z" title="发表于 2026-09-29 22:11:16">2026-09-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-09-29T14:20:07.962Z" title="更新于 2026-09-29 22:20:07">2026-09-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%94%B6%E8%97%8F/">收藏</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>这里收录一些hexo博客搭建的方法和教程，希望我的博客可以逐渐完善！</p>
+<p>🔗 文件链接<br>👉 <a target="_blank" rel="noopener" href="https://xbxyftx.top/2025/06/27/BlogSetup/#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8D%9A%E5%AE%A2">点击访问教程1（xbxyftx版）</a></p>
+<p>👉 <a target="_blank" rel="noopener" href="https://baiyb.top/2025/06/27/%E5%9F%BA%E4%BA%8EHexo%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">点击访问教程2</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">殷可欣</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2026/09/29/%E6%94%B6%E8%97%8F%E4%B8%80%E4%BA%9B%E5%A4%A7%E4%BD%AC%E7%9A%84hexo%E6%95%99%E7%A8%8B-%E6%A8%A1%E6%9D%BF/">http://example.com/2026/09/29/%E6%94%B6%E8%97%8F%E4%B8%80%E4%BA%9B%E5%A4%A7%E4%BD%AC%E7%9A%84hexo%E6%95%99%E7%A8%8B-%E6%A8%A1%E6%9D%BF/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">NancyYin</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BC%96%E7%A8%8B-%EF%BC%8Chexo/">编程 ，hexo</a></div><div class="post-share"><div class="social-share" data-image="https://pic1.imgdb.cn/i/034XGS6VVAO1jBL9f1kvfK.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/09/29/%E8%A1%97%E8%88%9E%E6%97%A5%E8%AE%B0/" title="街舞日记"><img class="cover" src="https://pic1.imgdb.cn/i/034Wy6ts6XJemDK8lhv0u7.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">街舞日记</div></div><div class="info-2"><div class="info-item-1">📌 视频简介记录我的一大爱好 —— 街舞，可以激励我持续学习，继续进步！ 🎬 视频播放👉 点击观看我的军训表演——redred👉 点击观看我的军训单人——thankunext </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://github.com/NancyYin-789.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">殷可欣</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/NancyYin-789" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:18310252588@189.cn" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://pic1.imgdb.cn/i/034XeqJVBaXkVI3jS7iy6x.jpg" target="_blank" title="wechat"><i class="fab fa-weixin" style="color: #07C160;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/09/29/%E6%94%B6%E8%97%8F%E4%B8%80%E4%BA%9B%E5%A4%A7%E4%BD%AC%E7%9A%84hexo%E6%95%99%E7%A8%8B-%E6%A8%A1%E6%9D%BF/" title="收藏一些大佬的hexo教程&amp;模板"><img src="https://pic1.imgdb.cn/i/034XGS6VVAO1jBL9f1kvfK.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="收藏一些大佬的hexo教程&amp;模板"/></a><div class="content"><a class="title" href="/2026/09/29/%E6%94%B6%E8%97%8F%E4%B8%80%E4%BA%9B%E5%A4%A7%E4%BD%AC%E7%9A%84hexo%E6%95%99%E7%A8%8B-%E6%A8%A1%E6%9D%BF/" title="收藏一些大佬的hexo教程&amp;模板">收藏一些大佬的hexo教程&amp;模板</a><time datetime="2026-09-29T14:11:16.000Z" title="发表于 2026-09-29 22:11:16">2026-09-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/09/29/%E8%A1%97%E8%88%9E%E6%97%A5%E8%AE%B0/" title="街舞日记"><img src="https://pic1.imgdb.cn/i/034Wy6ts6XJemDK8lhv0u7.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="街舞日记"/></a><div class="content"><a class="title" href="/2026/09/29/%E8%A1%97%E8%88%9E%E6%97%A5%E8%AE%B0/" title="街舞日记">街舞日记</a><time datetime="2026-09-29T01:40:45.000Z" title="发表于 2026-09-29 09:40:45">2026-09-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/09/29/%E6%88%91%E7%9A%84HongKong-vlog/" title="我的HongKong vlog"><img src="https://pic1.imgdb.cn/i/034WxljNAhsBACoStXlYTY.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的HongKong vlog"/></a><div class="content"><a class="title" href="/2026/09/29/%E6%88%91%E7%9A%84HongKong-vlog/" title="我的HongKong vlog">我的HongKong vlog</a><time datetime="2026-09-29T01:31:37.000Z" title="发表于 2026-09-29 09:31:37">2026-09-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/09/29/Cyberpunk%E4%B9%8B%E9%83%BD-%E9%87%8D%E5%BA%86/" title="Cyberpunk之都--重庆"><img src="https://pic1.imgdb.cn/i/034WxYdEtKE9kMXVTeuT74.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Cyberpunk之都--重庆"/></a><div class="content"><a class="title" href="/2026/09/29/Cyberpunk%E4%B9%8B%E9%83%BD-%E9%87%8D%E5%BA%86/" title="Cyberpunk之都--重庆">Cyberpunk之都--重庆</a><time datetime="2026-09-29T01:22:02.000Z" title="发表于 2026-09-29 09:22:02">2026-09-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/09/29/%E6%96%B0%E5%8A%A0%E5%9D%A1CBD%E5%A4%9C%E6%99%AF/" title="新加坡CBD夜景"><img src="https://pic1.imgdb.cn/i/034WxN5xOLXIHQV4uik74M.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新加坡CBD夜景"/></a><div class="content"><a class="title" href="/2026/09/29/%E6%96%B0%E5%8A%A0%E5%9D%A1CBD%E5%A4%9C%E6%99%AF/" title="新加坡CBD夜景">新加坡CBD夜景</a><time datetime="2026-09-29T01:15:39.000Z" title="发表于 2026-09-29 09:15:39">2026-09-29</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2025 - 2026 By 殷可欣</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.0-b3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><div id="my-toast" style="position:fixed;top:20px;left:50%;transform:translateX(-50%);width:380px;background:rgba(20,40,90,0.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff;padding:15px 20px;border-radius:12px;z-index:9999;box-shadow:0 4px 15px rgba(0,0,0,0.3);font-size:14px;display:none;border:1px solid rgba(255,255,255,0.2);word-wrap:break-word;word-break:break-all;"><div style="font-weight:bold;margin-bottom:5px;">NancyYin:</div><div id="toast-msg" style="line-height:1.5;">请看我的代码板块,虽简单但凝聚了我的passion!</div><span onclick="document.getElementById('my-toast').remove()" style="position:absolute;top:10px;right:15px;cursor:pointer;font-weight:bold;opacity:0.7;">×</span></div><script>var msgArray = ['请看我的代码板块,虽简单但凝聚了我的passion!', '欢迎来到我的博客，记录热爱与生活~', '祝你天天开心！']; var msgIndex = 0; setTimeout(function(){ var el = document.getElementById('my-toast'); if(!el) return; el.style.display = 'block'; var timer = setInterval(function(){ msgIndex++; if(msgIndex >= msgArray.length){ clearInterval(timer); el.style.opacity = '0'; setTimeout(function(){ el.remove(); }, 500); return; } document.getElementById('toast-msg').innerHTML = msgArray[msgIndex]; }, 5000); }, 1500);</script><canvas id="matrix-rain" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:0.6;"></canvas><script>var c=document.getElementById('matrix-rain');var ctx=c.getContext('2d');c.width=window.innerWidth;c.height=window.innerHeight;var chars='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()';var charArr=chars.split('');var fontSize=14;var columns=c.width/fontSize;var drops=[];for(var x=0;x<columns;x++){drops[x]=1;}function draw(){ctx.fillStyle='rgba(0,0,0,0.05)';ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle='#0F0';ctx.font=fontSize+'px monospace';for(var i=0;i<drops.length;i++){var text=charArr[Math.floor(Math.random()*charArr.length)];ctx.fillText(text,i*fontSize,drops[i]*fontSize);if(drops[i]*fontSize>c.height&&Math.random()>0.975){drops[i]=0;}drops[i]++;}}setInterval(draw,33);window.addEventListener('resize',function(){c.width=window.innerWidth;c.height=window.innerHeight;columns=c.width/fontSize;drops=[];for(var x=0;x<columns;x++){drops[x]=1;}});</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
